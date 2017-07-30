@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './reducer';
 import { TodoList } from './containers';
+import Perf from 'react-addons-perf';
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
@@ -13,3 +14,5 @@ render(
   </Provider>,
   document.getElementById('app')
 );
+
+window.Perf = Perf;
