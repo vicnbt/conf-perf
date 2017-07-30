@@ -29,10 +29,9 @@ export function TodoList(props) {
       <ul className='todo__list'>
         {todos.map(t => (
           <li
-            key={t.get('id')}
-            className='todo__item'
-            onClick={toggleClick(t.get('id'))}>
-            <Todo todo={t.toJS()} />
+            key={t['id']}
+            className='todo__item'>
+            <Todo todo={t} />
           </li>
         ))}
       </ul>

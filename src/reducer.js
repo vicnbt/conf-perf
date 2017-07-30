@@ -1,21 +1,22 @@
 import { List, Map } from 'immutable';
 
-const init = List([]);
+const init = ([]);
 
 export default function(state=init, action) {
   switch(action.type) {
     case 'ADD_TODO':
-      return state.push(
-        Map(action.payload)
-      );
+      const arr = state.slice();
+      arr.push(action.payload);
+      return arr;
     case 'TOGGLE_TODO':
-      return state.map(t => {
+      return state;
+      /*return state.map(t => {
         if(t.get('id') == action.payload) {
           return t.update('isDone', isDone => !isDone);
         } else {
           return t;
         }
-      });
+      });*/
     default:
       return state;
   }
