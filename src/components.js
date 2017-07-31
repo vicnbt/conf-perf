@@ -1,12 +1,5 @@
 import React from 'react';
-
-export function Todo({ todo }) {
-  if(todo.isDone) {
-    return <strike>{todo.text}</strike>;
-  } else {
-    return <span>{todo.text}</span>;
-  }
-}
+import Todo from './item';
 
 export function TodoList(props) {
   const { todos, toggleTodo, addTodo } = props;
@@ -28,11 +21,7 @@ export function TodoList(props) {
              onKeyDown={onSubmit} />
       <ul className='todo__list'>
         {todos.map(t => (
-          <li
-            key={t['id']}
-            className='todo__item'>
             <Todo todo={t} />
-          </li>
         ))}
       </ul>
     </div>
