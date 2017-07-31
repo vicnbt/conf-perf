@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
 
-class TodoList extends PureComponent {
+class Todo extends PureComponent {
     render() {
         const { todo } = this.props;
 
@@ -17,4 +17,4 @@ class TodoList extends PureComponent {
     }
 }
 
-export default TodoList;
+export default Todo;
