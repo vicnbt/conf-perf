@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 
 
-class TodoList extends PureComponent {
+class TodoList extends React.Component {
+  shouldComponentUpdate: () => true
   render() {
     const { todo } = this.props;
-
     return (
       <li
         key={todo['id']}
